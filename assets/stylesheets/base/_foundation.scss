@@ -2,6 +2,10 @@
 
 html {
   @include body-text;
+
+  &.is-viewing-col-secondary {
+    background-color: $light-gray;
+  }
 }
 
 body {
@@ -19,24 +23,71 @@ div {
   flex: 1;
 }
 
+.header,
+.header-spacer {
+  height: $header-height;
+
+  @include breakpoint(md) {
+    height: $header-height-md;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.primary-col,
+.col-header--primary,
+.fixed-bg-row__primary-col {
+  background-color: $white;
+}
+
 .secondary-col,
-.col-header--secondary {
+.col-header--secondary,
+.fixed-bg-row__secondary-col {
   background-color: $light-gray;
 }
 
 .col-header {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  @include breakpoint(xs-sm) {
+    cursor: pointer;
+  }
+}
 
+.primary-col,
+.secondary-col {
   @include breakpoint(md) {
-    padding-top: 1em;
-    padding-bottom: 2em;
+    overflow: auto;
+    max-height: calc(100vh - #{$header-height-md});
+  }
+}
+
+.secondary-col {
+  @include breakpoint(xs-sm) {
+    display: none;
   }
 }
 
 .inner-padding-x {
-  padding-left: 2.5em;
-  padding-right: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include breakpoint(md) {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+}
+
+.caption {
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include breakpoint(md) {
+    @include site-padding;
+  }
 }
 
 .image-wrapper {
@@ -45,13 +96,21 @@ div {
   img {
     margin-bottom: 1em;
 
+    @include breakpoint(md) {
+      cursor: zoom-in;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 }
 
-.caption {
-  @include site-padding;
-  @include site-padding;
+.fixed-bg-row {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

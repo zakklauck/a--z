@@ -1,2 +1,3 @@
 import './application.js';
-// import './partials/my-script';
+import './partials/column_tabs';
+import './partials/lightbox';

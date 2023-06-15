@@ -14,6 +14,10 @@ $default: 'Venus-Medium', sans-serif;
   font-family: $default;
 
   @include breakpoint(md) {
+    font-size: 24px;
+  }
+
+  @include breakpoint(lg) {
     font-size: calc(var(--base-font-size) / var(--viewport-basis) * (100vw - #{$site-padding-md * 2}));
   }
 }

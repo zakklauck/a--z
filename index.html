@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-  <title></title>
+  <!-- Set the title that appears in search results -->
+  <title>A--Z</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Set the description that appears in search results -->
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,36 +31,59 @@
   <!-- <meta property="og:image" content=""> -->
   <!-- <meta itemprop="image" content=""> -->
   <!-- <meta itemprop="twitter:image" content=""> -->
+
+  <!-- TODO: Add analytics -->
+
   <link id="favicon" rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="assets/dist/stylesheets/style.css?v=1" type="text/css">
 </head>
 <body>
   <div class="application-wrapper">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-header col-header--primary col">
-          <h1 class="text-center">A–Z</h1>
-        </div>
-        <div class="col-header col-header--secondary col">
-          <h2 class="text-center">Studio</h2>
+    <!-- HEADER -->
+    <header id="header" class="header">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <div class="col-header col-header--primary col d-flex flex-column align-items-center justify-content-center h-100" data-col="primary">
+            <h1 class="text-center">A–Z</h1>
+          </div>
+          <div class="col-header col-header--secondary col d-flex flex-column align-items-center justify-content-center h-100" data-col="secondary">
+            <h2 class="text-center">Studio</h2>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
+    <div class="header-spacer"></div>
+    <!-- END HEADER -->
+
     <div class="row g-0">
-      <div class="primary-col col-md">
+      <!-- PRIMARY COLUMN -->
+      <div class="primary-col col-lg pt-5 pt-lg-3" data-main-col="primary">
+        <!-- Copy and paste the project code contained in the image-wrapper element to add new projects with optional captions. -->
+
+        <!-- PROJECT -->
+        <div class="image-wrapper">
+          <img src="assets/images/project-1.jpg" alt="A project for Heritage lorem ipsum.">
+          <div class="caption">Possible to have text with the image. Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.Possible to have text with the image.</div>
+        </div>
+        <!-- END PROJECT -->
+
+        <!-- PROJECT -->
         <div class="image-wrapper">
           <img src="assets/images/project-1.jpg" alt="A project for Heritage lorem ipsum.">
           <div class="caption">Possible to have text with the image.</div>
         </div>
+        <!-- END PROJECT -->
+
+        <!-- PROJECT -->
         <div class="image-wrapper">
           <img src="assets/images/project-1.jpg" alt="A project for Heritage lorem ipsum.">
-          <div class="caption">Possible to have text with the image.</div>
         </div>
-        <div class="image-wrapper">
-          <img src="assets/images/project-1.jpg" alt="A project for Heritage lorem ipsum.">
-        </div>
+        <!-- END PROJECT -->
       </div>
-      <div class="secondary-col col-md">
+      <!-- END PRIMARY COLUMN -->
+
+      <!-- SECONDARY COLUMN -->
+      <div class="secondary-col col-lg pt-5 pt-lg-3" data-main-col="secondary">
         <div class="inner-padding-x">
           <p>Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever. Text about the studio or whatever.</p>
           <p>
@@ -71,8 +96,18 @@
           </p>
         </div>
       </div>
+      <!-- END SECONDARY COLUMN -->
     </div>
   </div>
+
+  <!-- BACKGROUND COLOR COLUMN FIX -->
+  <div class="row fixed-bg-row g-0 d-none d-lg-flex">
+    <div class="col fixed-bg-row__primary-col"></div>
+    <div class="col fixed-bg-row__secondary-col"></div>
+  </div>
+  <!-- END BACKGROUND COLOR COLUMN FIX -->
+
+  <!-- SCRIPTS -->
   <script src="assets/javascripts/lib/jquery.min.js"></script>
   <script src="assets/dist/javascripts/src/app.js?v=1"></script>
 </body>
