@@ -1,7 +1,7 @@
 // Foundation
 
 html {
-  @include default-font;
+  @include body-text;
 }
 
 body {
@@ -17,4 +17,41 @@ div {
 
 .application-wrapper {
   flex: 1;
+}
+
+.secondary-col,
+.col-header--secondary {
+  background-color: $light-gray;
+}
+
+.col-header {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  @include breakpoint(md) {
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+}
+
+.inner-padding-x {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.image-wrapper {
+  margin-bottom: 3em;
+
+  img {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.caption {
+  @include site-padding;
+  @include site-padding;
 }

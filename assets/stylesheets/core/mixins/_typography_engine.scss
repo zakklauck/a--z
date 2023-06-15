@@ -1,19 +1,20 @@
 // Font stacks
-$default: sans-serif;
+$default: 'Venus-Medium', sans-serif;
+
+:root {
+  --viewport-basis: 1440;
+  --base-font-size: 26;
+}
 
 // Body text
 @mixin body-text {
-  font-size: 16px;
+  font-size: 24px;
   letter-spacing: 0;
-  line-height: 1.4;
+  line-height: normal;
   font-family: $default;
 
   @include breakpoint(md) {
-    font-size: 20px;
+    font-size: calc(var(--base-font-size) / var(--viewport-basis) * (100vw - #{$site-padding-md * 2}));
   }
 }
 .body-text { @include body-text; }
-
-@mixin default-font {
-  @include body-text;
-}
